@@ -6,7 +6,7 @@ Bundled up the latest version of jqplot into something useable with the Rails 3.
 
 include the Gem in your gemfile
 
-    gem 'jqplot-ruby'
+    gem 'jqplot-rails'
 
 Then include the css and js in your application.{js,css} in your Rails application
 

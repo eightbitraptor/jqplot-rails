@@ -12,14 +12,16 @@ Then include the css and js in your application.{js,css} in your Rails applicati
 
 application.css:
 
-     *= require jqplot.1.0.0b2_r792
+    //= require jqplot
 
 application.js:
 
     //= require jquery
     //= require jquery_ujs
-    //= require jqplot.1.0.0b2_r792
+    //= require jqplot
+
+and optional plugins in application.js:
+
+    //= require jqplot/plugins/dateAxisRenderer # optional
 
 after a quick `bundle install` you should be good to go.
-
-Have fun.

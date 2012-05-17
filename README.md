@@ -22,6 +22,6 @@ application.js:
 
 and optional plugins in application.js:
 
-    //= require jqplot/plugins/dateAxisRenderer # optional
+    //= require jqplot/plugins/dateAxisRenderer
 
 after a quick `bundle install` you should be good to go.

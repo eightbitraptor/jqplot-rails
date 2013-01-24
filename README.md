@@ -33,3 +33,5 @@ To create a graph in a view, you can use JS or use the following helper
 like in this example
 
     <%= jqplot 200, 400, [[1, 2, 3, 4], [4, 3, 2, 1]], {legend: {show: true}} %>
+
+This helper is based on code from https://github.com/Guidecase/jqplot-rails

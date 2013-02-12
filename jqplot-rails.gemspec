@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "jqplot-rails"
-  s.version     = "0.2"
+  s.version     = "0.3"
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Matt House"]
   s.email       = ["matt@eightbitraptor.com"]

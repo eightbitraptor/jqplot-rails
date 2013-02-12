@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "jqplot-rails"
-  s.version     = "0.2"
+  s.version     = "0.3"
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Matt House"]
   s.email       = ["matt@eightbitraptor.com"]
@@ -10,8 +10,7 @@ Gem::Specification.new do |s|
   s.files         = Dir.glob("{vendor,lib}/**/*")
   s.require_paths = ["lib"]
 
-  s.add_dependency "railties", "~> 3.0"
-  s.add_dependency "thor",     "~> 0.14"
-  s.add_development_dependency "bundler", "~> 1.0.0"
-  s.add_development_dependency "rails",   "~> 3.0"
+  s.add_dependency "railties"
+  s.add_development_dependency "bundler"
+  s.add_development_dependency "rails"
 end

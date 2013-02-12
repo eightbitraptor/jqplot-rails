@@ -12,7 +12,7 @@ Then include the css and js in your application.{js,css} in your Rails applicati
 
 application.css:
 
-    //= require jqplot
+    *= require jqplot
 
 application.js:
 

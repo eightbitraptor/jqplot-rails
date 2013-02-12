@@ -5,12 +5,12 @@
  * 
  * About: Version
  * 
- * version: 1.0.4 
- * revision: 1121
+ * version: 1.0.5 
+ * revision: 1122+
  * 
  * About: Copyright & License
  * 
- * Copyright (c) 2009-2012 Chris Leonello
+ * Copyright (c) 2009-2013 Chris Leonello
  * jqPlot is currently available for use in all personal or commercial projects 
  * under both the MIT and GPL version 2.0 licenses. This means that you can 
  * choose the license that best suits your project and use it accordingly.
@@ -244,8 +244,8 @@
         }
     };
 
-    $.jqplot.version = "1.0.4";
-    $.jqplot.revision = "1121";
+    $.jqplot.version = "1.0.5";
+    $.jqplot.revision = "1122+";
 
     $.jqplot.targetCounter = 1;
 
@@ -395,7 +395,7 @@
         return $.jqplot.support_canvas_text.result;
     };
     
-    $.jqplot.use_excanvas = ($.browser.msie && !$.jqplot.support_canvas()) ? true : false;
+    $.jqplot.use_excanvas = ((!$.support.boxModel || !$.support.objectAll || !$support.leadingWhitespace) && !$.jqplot.support_canvas()) ? true : false;
     
     /**
      * 
@@ -9323,7 +9323,7 @@
      * @author Chris Leonello
      * @date #date#
      * @version #VERSION#
-     * @copyright (c) 2010 Chris Leonello
+     * @copyright (c) 2010-2013 Chris Leonello
      * jsDate is currently available for use in all personal or commercial projects 
      * under both the MIT and GPL version 2.0 licenses. This means that you can 
      * choose the license that best suits your project and use it accordingly.
@@ -9957,16 +9957,16 @@
         },
         
         'fr': {
-            monthNames: ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'],
-            monthNamesShort: ['Jan','Fév','Mar','Avr','Mai','Jun','Jul','Aoû','Sep','Oct','Nov','Déc'],
+            monthNames: ['Janvier','FÃ©vrier','Mars','Avril','Mai','Juin','Juillet','AoÃ»t','Septembre','Octobre','Novembre','DÃ©cembre'],
+            monthNamesShort: ['Jan','FÃ©v','Mar','Avr','Mai','Jun','Jul','AoÃ»','Sep','Oct','Nov','DÃ©c'],
             dayNames: ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],
             dayNamesShort: ['Dim','Lun','Mar','Mer','Jeu','Ven','Sam'],
             formatString: '%Y-%m-%d %H:%M:%S'
         },
         
         'de': {
-            monthNames: ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'],
-            monthNamesShort: ['Jan','Feb','Mär','Apr','Mai','Jun','Jul','Aug','Sep','Okt','Nov','Dez'],
+            monthNames: ['Januar','Februar','MÃ¤rz','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'],
+            monthNamesShort: ['Jan','Feb','MÃ¤r','Apr','Mai','Jun','Jul','Aug','Sep','Okt','Nov','Dez'],
             dayNames: ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'],
             dayNamesShort: ['So','Mo','Di','Mi','Do','Fr','Sa'],
             formatString: '%Y-%m-%d %H:%M:%S'
@@ -9981,18 +9981,18 @@
         },
         
         'ru': {
-            monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-            monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
-            dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
-            dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+            monthNames: ['Ð¯Ð½Ð²Ð°ÑÑ','Ð¤ÐµÐ²ÑÐ°Ð»Ñ','ÐÐ°ÑÑ','Ð?Ð¿ÑÐµÐ»Ñ','ÐÐ°Ð¹','ÐÑÐ½Ñ','ÐÑÐ»Ñ','Ð?Ð²Ð³ÑÑ?Ñ','Ð¡ÐµÐ½ÑÑ?Ð±ÑÑ','ÐÐºÑÑ?Ð±ÑÑ','Ð?Ð¾Ñ?Ð±ÑÑ','ÐÐµÐºÐ°Ð±ÑÑ'],
+            monthNamesShort: ['Ð¯Ð½Ð²','Ð¤ÐµÐ²','ÐÐ°Ñ','Ð?Ð¿Ñ','ÐÐ°Ð¹','ÐÑÐ½','ÐÑÐ»','Ð?Ð²Ð³','Ð¡ÐµÐ½','ÐÐºÑ','Ð?Ð¾Ñ?','ÐÐµÐº'],
+            dayNames: ['Ð²Ð¾Ñ?ÐºÑÐµÑ?ÐµÐ½ÑÐµ','Ð¿Ð¾Ð½ÐµÐ´ÐµÐ»ÑÐ½Ð¸Ðº','Ð²ÑÐ¾ÑÐ½Ð¸Ðº','Ñ?ÑÐµÐ´Ð°','ÑÐµÑÐ²ÐµÑÐ³','Ð¿Ñ?ÑÐ½Ð¸ÑÐ°','Ñ?ÑÐ±Ð±Ð¾ÑÐ°'],
+            dayNamesShort: ['Ð²Ñ?Ðº','Ð¿Ð½Ð´','Ð²ÑÑ','Ñ?ÑÐ´','ÑÑÐ²','Ð¿ÑÐ½','Ñ?Ð±Ñ'],
             formatString: '%Y-%m-%d %H:%M:%S'
         },
         
         'ar': {
-            monthNames: ['كانون الثاني', 'شباط', 'آذار', 'نيسان', 'آذار', 'حزيران','تموز', 'آب', 'أيلول',   'تشرين الأول', 'تشرين الثاني', 'كانون الأول'],
+            monthNames: ['ÙØ§ÙÙÙ Ø§ÙØ«Ø§ÙÙ', 'Ø´Ø¨Ø§Ø·', 'Ø¢Ø°Ø§Ø±', 'ÙÙØ³Ø§Ù', 'Ø¢Ø°Ø§Ø±', 'Ø­Ø²ÙØ±Ø§Ù','ØªÙÙØ²', 'Ø¢Ø¨', 'Ø£ÙÙÙÙ',   'ØªØ´Ø±ÙÙ Ø§ÙØ£ÙÙ', 'ØªØ´Ø±ÙÙ Ø§ÙØ«Ø§ÙÙ', 'ÙØ§ÙÙÙ Ø§ÙØ£ÙÙ'],
             monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'],
-            dayNames: ['السبت', 'الأحد', 'الاثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة'],
-            dayNamesShort: ['سبت', 'أحد', 'اثنين', 'ثلاثاء', 'أربعاء', 'خميس', 'جمعة'],
+            dayNames: ['Ø§ÙØ³Ø¨Øª', 'Ø§ÙØ£Ø­Ø¯', 'Ø§ÙØ§Ø«ÙÙÙ', 'Ø§ÙØ«ÙØ§Ø«Ø§Ø¡', 'Ø§ÙØ£Ø±Ø¨Ø¹Ø§Ø¡', 'Ø§ÙØ®ÙÙØ³', 'Ø§ÙØ¬ÙØ¹Ø©'],
+            dayNamesShort: ['Ø³Ø¨Øª', 'Ø£Ø­Ø¯', 'Ø§Ø«ÙÙÙ', 'Ø«ÙØ§Ø«Ø§Ø¡', 'Ø£Ø±Ø¨Ø¹Ø§Ø¡', 'Ø®ÙÙØ³', 'Ø¬ÙØ¹Ø©'],
             formatString: '%Y-%m-%d %H:%M:%S'
         },
         

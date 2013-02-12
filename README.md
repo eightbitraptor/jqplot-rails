@@ -54,7 +54,11 @@ To upgrade the JQPlot library
   rm *.min.js
   ```
   3. Copy the files specified below into their appropriate /vendor/assets/ folders
+  
     a) javascripts/jqplot/jquery.jqplot.js
+
     b) javascripts/jqplot/excanvas.js
+    
     c) javascripts/jqplot/plugins/*
+    
     d) stylesheets/jqplot/jquery.jplot.css

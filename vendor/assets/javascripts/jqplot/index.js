@@ -47,6 +47,11 @@ $(document).ready(function() {
         }
       }
     }
+    if (options.legend) {
+      if (typeof(options.legend.renderer) === 'string' && options.legend.renderer.indexOf('$.') === 0) {
+        options.legend.renderer = eval(options.legend.renderer)
+      }
+    }
     if (options.seriesDefaults &&
         typeof(options.seriesDefaults.renderer) === 'string' &&
         options.seriesDefaults.renderer.indexOf('$.') === 0) {

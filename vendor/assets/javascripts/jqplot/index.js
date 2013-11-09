@@ -8,11 +8,16 @@ $(document).ready(function() {
 
     // renderer options are JS objects
     // they must be eval'd
-    if (options.axesDefaults &&
-      typeof(options.axesDefaults.renderer) === 'string' &&
+    if (options.axesDefaults) {
+      if (typeof(options.axesDefaults.renderer) === 'string' &&
       options.axesDefaults.renderer.indexOf('$.') === 0) {
         options.axesDefaults.renderer = eval(options.axesDefaults.renderer)
       }
+      if (typeof(options.axesDefaults.tickRenderer) === 'string' &&
+      options.axesDefaults.tickRenderer.indexOf('$.') === 0) {
+        options.axesDefaults.tickRenderer = eval(options.axesDefaults.tickRenderer)
+      }
+    }
     if (options.axes) {
       if(options.axes.xaxis) {
         if(typeof(options.axes.xaxis.tickRenderer) === 'string' && options.axes.xaxis.tickRenderer.indexOf('$.') === 0) {

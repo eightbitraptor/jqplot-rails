@@ -74,6 +74,11 @@ $(document).ready(function() {
     }
 
     // initialize the graph
-    $.jqplot($(this).attr('id'), $(this).data('series'), options);
+    if (typeof($(this).data('name')) === 'string' && $(this).data('name') != ''){
+      var graph =  $.jqplot($(this).attr('id'), $(this).data('series'), options);
+      eval("window." + $(this).data('name') + " = graph;")
+    }else{
+      $.jqplot($(this).attr('id'), $(this).data('series'), options);
+    }
   });
 });

@@ -69,6 +69,9 @@ $(document).ready(function() {
         }
       }
     }
+    if (typeof(options.dataRenderer) === 'string'){
+        options.dataRenderer = eval(options.dataRenderer)
+    }
 
     // initialize the graph
     $.jqplot($(this).attr('id'), $(this).data('series'), options);

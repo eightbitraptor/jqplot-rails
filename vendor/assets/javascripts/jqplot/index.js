@@ -43,6 +43,10 @@ $(document).ready(function() {
           options.axes.x2axis.renderer = eval(options.axes.x2axis.renderer)
         }
       }
+      if (options.highlighter && options.highlighter.tooltipContentEditor && typeof(options.highlighter.tooltipContentEditor) === 'string'
+        && options.highlighter.tooltipContentEditor.indexOf('function') === 0) {
+        eval("options.highlighter.tooltipContentEditor = " + options.highlighter.tooltipContentEditor)
+      }
       if(options.axes.y2axis) {
         if(typeof(options.axes.y2axis.tickRenderer) === 'string' && options.axes.y2axis.tickRenderer.indexOf('$.') === 0) {
           options.axes.y2axis.tickRenderer = eval(options.axes.y2axis.tickRenderer)

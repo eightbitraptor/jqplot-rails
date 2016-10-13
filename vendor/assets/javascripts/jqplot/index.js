@@ -43,6 +43,10 @@ $(document).ready(function() {
           options.axes.x2axis.renderer = eval(options.axes.x2axis.renderer)
         }
       }
+      if (options.highlighter && options.highlighter.tooltipContentEditor && typeof(options.highlighter.tooltipContentEditor) === 'string'
+        && options.highlighter.tooltipContentEditor.indexOf('function') === 0) {
+        eval("options.highlighter.tooltipContentEditor = " + options.highlighter.tooltipContentEditor)
+      }
       if(options.axes.y2axis) {
         if(typeof(options.axes.y2axis.tickRenderer) === 'string' && options.axes.y2axis.tickRenderer.indexOf('$.') === 0) {
           options.axes.y2axis.tickRenderer = eval(options.axes.y2axis.tickRenderer)
@@ -69,8 +73,16 @@ $(document).ready(function() {
         }
       }
     }
+    if (typeof(options.dataRenderer) === 'string'){
+        options.dataRenderer = eval(options.dataRenderer)
+    }
 
     // initialize the graph
-    $.jqplot($(this).attr('id'), $(this).data('series'), options);
+    if (typeof($(this).data('name')) === 'string' && $(this).data('name') != ''){
+      var graph =  $.jqplot($(this).attr('id'), $(this).data('series'), options);
+      eval("window." + $(this).data('name') + " = graph;")
+    }else{
+      $.jqplot($(this).attr('id'), $(this).data('series'), options);
+    }
   });
 });
